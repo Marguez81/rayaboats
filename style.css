@@ -31,12 +31,14 @@ body {
 }
 
 .hero {
-  width: min(100%, 1600px);
+  width: min(100%, 1540px);
   max-height: 72svh;
   object-fit: contain;
   display: block;
   user-select: none;
   pointer-events: none;
+
+  transform: translateY(-18px) scale(0.965);
 }
 
 .interest-form {
@@ -48,7 +50,7 @@ body {
   border-radius: 5px;
   overflow: hidden;
   background: rgba(0, 0, 0, 0.02);
-  margin-top: 22px;
+  margin-top: 18px;
 }
 
 .interest-form input,
@@ -122,6 +124,8 @@ body {
     max-width: none;
     margin-left: 0;
     max-height: none;
+
+    transform: translateY(-10px) scale(0.97);
   }
 
   .interest-form {
