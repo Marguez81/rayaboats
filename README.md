@@ -1,16 +1,10 @@
-# RAYA Boats Landing Page — V2
+# RAYA Boats Landing Page — V4 Fixed Spacing
 
-This package includes an improved favicon:
-- black background
-- stronger shield contrast
-- favicon sizes: 16, 32, 48, 180, 512 px
-- `favicon.ico` included
+Fixed:
+- no duplicated fake form
+- COMING SOON fully visible
+- real form positioned below with correct spacing
+- black-background favicon included
 
-## Formspree endpoint
+Formspree endpoint:
 https://formspree.io/f/mykvjnag
-
-## Deploy on Vercel
-1. Download and unzip this package.
-2. Upload/import the folder to Vercel.
-3. Deploy.
-4. Add `rayaboats.com` in Vercel → Project Settings → Domains.

@@ -5,53 +5,50 @@
 html,
 body {
   margin: 0;
-  width: 100%;
   min-height: 100%;
   background: #000;
 }
 
 body {
-  overflow: hidden;
   font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
 }
 
-.stage {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
+.page {
+  min-height: 100svh;
   background: #000;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 18px 24px 28px;
 }
 
-.hero-reference {
-  display: block;
-  width: min(100vw, 160vh);
-  height: auto;
-  max-height: 100vh;
+.landing {
+  width: min(100%, 1600px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero {
+  width: min(100%, 1600px);
+  max-height: 72svh;
   object-fit: contain;
+  display: block;
   user-select: none;
   pointer-events: none;
 }
 
-/*
-  The visual reference is 1600x1000.
-  This real form is positioned exactly over the form area.
-*/
 .interest-form {
-  --scale: min(100vw / 1600, 100vh / 1000);
-  position: absolute;
-  left: calc(50% - (650px * var(--scale)) / 2);
-  top: calc(50% + 286px * var(--scale));
-  width: calc(650px * var(--scale));
-  height: calc(58px * var(--scale));
+  width: min(650px, 78vw);
+  height: 58px;
   display: grid;
   grid-template-columns: 1.62fr 1fr;
-  border: calc(1px * var(--scale)) solid rgba(180, 180, 180, 0.5);
-  border-radius: calc(5px * var(--scale));
+  border: 1px solid rgba(180, 180, 180, 0.56);
+  border-radius: 5px;
   overflow: hidden;
   background: rgba(0, 0, 0, 0.02);
+  margin-top: 22px;
 }
 
 .interest-form input,
@@ -61,13 +58,14 @@ body {
   background: transparent;
   color: rgba(245, 245, 245, 0.92);
   height: 100%;
-  font-size: calc(16px * var(--scale));
-  letter-spacing: calc(0.2px * var(--scale));
   outline: none;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .interest-form input {
-  padding: 0 calc(25px * var(--scale));
+  padding: 0 25px;
+  font-size: 16px;
+  letter-spacing: 0.2px;
 }
 
 .interest-form input::placeholder {
@@ -75,10 +73,10 @@ body {
 }
 
 .interest-form button {
-  border-left: calc(1px * var(--scale)) solid rgba(180, 180, 180, 0.5);
+  border-left: 1px solid rgba(180, 180, 180, 0.56);
   cursor: pointer;
-  font-size: calc(14px * var(--scale));
-  letter-spacing: calc(2.3px * var(--scale));
+  font-size: 14px;
+  letter-spacing: 2.3px;
   font-weight: 600;
   transition: background 220ms ease, color 220ms ease;
 }
@@ -87,6 +85,14 @@ body {
 .interest-form button:focus-visible {
   background: rgba(255, 255, 255, 0.08);
   color: #fff;
+}
+
+.copyright {
+  margin: 44px 0 0;
+  color: rgba(180, 180, 180, 0.72);
+  font-size: 13px;
+  letter-spacing: 8px;
+  text-align: center;
 }
 
 .honeypot {
@@ -105,21 +111,39 @@ body {
   border: 0;
 }
 
-@media (max-aspect-ratio: 1/1) {
-  body {
-    overflow: auto;
+@media (max-width: 760px) {
+  .page {
+    padding: 14px 12px 24px;
+    align-items: flex-start;
   }
 
-  .stage {
-    min-height: 100svh;
-  }
-
-  .hero-reference {
-    width: 160vw;
+  .hero {
+    width: 150vw;
     max-width: none;
+    margin-left: 0;
+    max-height: none;
   }
 
   .interest-form {
-    --scale: min(160vw / 1600, 100vh / 1000);
+    width: min(92vw, 650px);
+    grid-template-columns: 1fr;
+    height: auto;
+    margin-top: 18px;
+  }
+
+  .interest-form input,
+  .interest-form button {
+    height: 52px;
+  }
+
+  .interest-form button {
+    border-left: 0;
+    border-top: 1px solid rgba(180, 180, 180, 0.56);
+  }
+
+  .copyright {
+    font-size: 11px;
+    letter-spacing: 5px;
+    margin-top: 34px;
   }
 }
