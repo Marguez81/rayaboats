@@ -1,10 +1,11 @@
-# RAYA Boats Landing Page — V4 Fixed Spacing
+# RAYA Boats Landing Page — V6 Approved Spacing
 
-Fixed:
-- no duplicated fake form
-- COMING SOON fully visible
-- real form positioned below with correct spacing
-- black-background favicon included
+Updates:
+- uses the approved visual spacing
+- removes the fake form from the image
+- keeps the real working Formspree form unchanged
+- keeps favicon files included
+- title remains "RAYA Boats"
 
 Formspree endpoint:
 https://formspree.io/f/mykvjnag
